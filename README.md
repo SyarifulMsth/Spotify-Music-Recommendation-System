@@ -89,7 +89,7 @@ Berikut adalah detail dari *features* dataset yang digunakan dalam pengembangan 
 	-  Salah satu teknik yang dapat digunakan dalam mengatasi *duplicated data* adalah dengan menghapus data yang terduplikat (*dropping*).		
 
 3. **Feature Engineering**
-*Feature Engineering* merupakan sebuah proses untuk mengembangkan dan memilih suatu fitur atau atribut (features) yang akan digunakan untuk melakukan analisis data atau dalam melakukan pembuatan sebuah model machine learning. 
+<br> *Feature Engineering* merupakan sebuah proses untuk mengembangkan dan memilih suatu fitur atau atribut (features) yang akan digunakan untuk melakukan analisis data atau dalam melakukan pembuatan sebuah model machine learning. 
 	
 	Pada proyek ini tahapan *feature engineering* dilakukan pada *features* data genre. Pada *features* genre terdapat beberapa data yang memiliki lebih dari satu genre. Sehingga perlu dilakukan penanganan, yaitu dengan memilih genre pada kategori pertama. Hal ini dilakukan agar memudahkan pengembangan model dan menghasilkan model dengan performa yang baik. 
 
@@ -100,6 +100,7 @@ Pada proyek ini algoritma machine learning yang digunakan di antaranya yaitu *Co
 *Content Based Filtering* merupakan metode yang digunakan dalam sistem rekomendasi dan analisis data yang berfokus pada karakteristik atau konten dari item-item yang ingin direkomendasikan atau dianalisis. Pendekatan tersebut menggunakan atribut-atribut atau *features* item untuk menentukan kesamaan antara item yang ada dan preferensi pengguna.
 
 <p align='center'><img src="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/content_based_filltering.png?raw=true"  width="500"></p>
+<p align='center'>Gambar 4. Algoritma Content Based Filtering</p> 
 
 **Kelebihan** : 
 - Dapat memberikan rekomendasi yang lebih personalisasi karena mempertimbangkan preferensi pengguna yang sudah diketahui.
@@ -112,7 +113,7 @@ Pada proyek ini algoritma machine learning yang digunakan di antaranya yaitu *Co
 ### Implementasi  
 Berikut adalah tahapan *modelling* menggunakan algoritma *Content Based Filtering* pada proyek ini, di antaranya : 
 - Vektorisasi dengan *TF-IDF* 
-	Pada tahap ini data yang telah dibersihkan dan siap digunakan akan dikonversi menjadi bentuk vekor dengan menggunakan *function TfidfVectorizer()* dari *library* scikit-learn. Pada tahapan ini, telah berhasil dilakukan identifikasi representasi *feature* dengan menggunakan *function TfidfVectorizer()*
+	Pada tahap ini data yang telah dibersihkan dan siap digunakan akan dikonversi menjadi bentuk vekor dengan menggunakan *function TfidfVectorizer()* dari *library* scikit-learn. Pada tahapan ini, telah berhasil dilakukan identifikasi representasi *feature* dengan menggunakan *function [TfidfVectorizer()](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html)*
 
 - Melakukan perhitungan derajat kesamaan (*cosine similarity*) 
 	Pada tahapan ini dilakukan perhitungan derajat kesamaan (*cosine similarity*) dengan menggunakan *function* *[cosine_similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html)* pada *dataframe* tfidf_matrix yang telah diperoleh pada tahapan sebelumnya. Pada tahapan ini dilakukan perhitungan kesamaan (*similarity*) antar musik atau lagu berdasarkan genre. 
@@ -143,7 +144,15 @@ Pada tabel 2 di atas diperoleh 5 rekomendasi musik atau lagu kepada pengguna ber
 
 
 ## 📈 Evaluation
-Pada proyek *machine learning* ini evaluasi model akan menggunakan *confussion matrix*. *Confussion matrix* memberi gambaran bagaimana performa model pada berbagai kelas. Ia menunjukkan berapa banyak jumlah prediksi yang benar (*True*) dan salah (*False*) untuk setiap label. 
+Proyek *machine learning* ini dikembangkan dengan menggunakan algoritma *Content Based Filtering*, sehingga evaluasi model yang akan digunakan pada proyek ini adalah sebagai berikut : 
+
+<p align='center'><img src="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/evaluation.png?raw=true"  width="500"></p>
+<p align='center'>Gambar 5. Evaluation</p> 
+
+Berdasarkan hasil pengujian yang telah dilakukan pada **subbab Hasil**, telah diperoleh hasil 5 rekomendasi musik atau lagu berdasarkan genre. Apabila dilakukan perhitungan untuk mengetahui bagaimana performa atau evaluasi dari model menggunakan formula pada Gambar 5. maka diperoleh nilai **Precision = 5/5 = 100%**
+
+## Conclusion
+Pengembangan model *machine learning* rekomendasi musik atau lagu dengan menggunakan algoritma *Content Based Filtering* membutuhkan beberapa tahapan yang bersifat iteratif, mulai dari *business understanding*, *data understanding*, dan seterusnya hingga tahapan *modelling* dan *evaluation*. Berdasarkan rangkaian tahapan tersebut diperoleh model *machine learning* rekomendasi musik atau lagu berdasarkan genre dengan hasil yang memuaskan, dengan nilai **precision 100%**. Dengan adanya model machine learning ini, diharapkan dapat membantu memberikan rekomendasi musik berdasarkan genre pada aplikasi layanan musik *online*.
 
 ## References
 
