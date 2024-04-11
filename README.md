@@ -38,6 +38,7 @@ Pada proyek ini dataset yang digunakan adalah [Dataset Top Hits Spotify from 200
 ### Variabel Dataset
 Berikut adalah detail dari *features* dataset yang digunakan dalam pengembangan model *machine learning* proyek ini : 
 
+Tabel 1. Dataset Top Hits Spotify from 2000-2019
 | Attribute | Description | Data Type |
 |---|---|---|
 | artist | Nama artis yang membawakan lagu | Text |
@@ -81,7 +82,6 @@ Berikut adalah detail dari *features* dataset yang digunakan dalam pengembangan 
 1. **Handling missing value** 
 	- *Missing value* merupakan salah satu masalah yang paling sering dijumpai dalam proyek analisis data di industri. Masalah ini muncul karena adanya nilai yang hilang dari sebuah data dan biasanya direpresentasikan sebagai nilai NaN dalam library pandas. Hal ini biasanya terjadi karena adanya *human error*, masalah privasi, proses *merging/join*, dll. 
 	- Tujuan dari langkah ini adalah untuk memastikan keakuratan dan keandalan data yang digunakan untuk analisis atau pemodelan. *Missing value* dapat menyebabkan bias dan kesalahan dalam analisis data, sehingga penting untuk mengidentifikasi dan mengatasi nilai yang hilang ini agar hasil analisis menjadi lebih akurat dan dapat diandalkan.
-	- Terdapat beberapa cara atau metode yang dapat digunakan  untuk menangani *missing value*, yaitu *Dropping*, *Imputation*, *Interpolation*, dan lainnya. 
 		
 2. **Handling duplicated data**
 	- *Duplicated data* adalah masalah lain yang umum dijumpai di industri. Ia terjadi ketika terdapat sebuah observasi (semua nilai dalam satu unit baris) yang memiliki nilai yang sama persis pada setiap kolomnya. 
@@ -126,12 +126,12 @@ Tahapan pengembangan model *machine learning* rekomendasi musik atau lagu telah 
 
 Dalam kasus ini, akan dicari lagu yang mirip dengan lagu dari Taylor Swift dengan judul **Love Story** yang bergenre **Pop**.
 
-Tabel.1 Informasi musik atau lagu untuk uji coba
+Tabel.2 Informasi musik atau lagu untuk uji coba
 | artist       | song       | year | popularity | genre |
 |--------------|------------|------|------------|-------|
 | Taylor Swift | Love Story | 2008 | 74         | pop   |
 
-Tabel 2. Hasil rekomendasi musik atau lagu berdasarkan genre 
+Tabel 3. Hasil rekomendasi musik atau lagu berdasarkan genre 
 |    | song              | genre |
 |----|-------------------|-------|
 | 0  | TiK ToK           | pop   |
@@ -144,15 +144,17 @@ Pada tabel 2 di atas diperoleh 5 rekomendasi musik atau lagu kepada pengguna ber
 
 
 ## 📈 Evaluation
-Proyek *machine learning* ini dikembangkan dengan menggunakan algoritma *Content Based Filtering*, sehingga evaluasi model yang akan digunakan pada proyek ini adalah sebagai berikut : 
+Proyek *machine learning* ini dikembangkan dengan menggunakan algoritma *Content Based Filtering*, sehingga metrik evaluasi model yang akan digunakan pada proyek ini menggunakan *Precision*. *Precision* dapat didefinisikan sebagai berikut : 
 
-<p align='center'><img src="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/evaluation.png?raw=true"  width="500"></p>
-<p align='center'>Gambar 5. Evaluation</p> 
+$\text{Precision} = \frac{r}{i}$
 
-Berdasarkan hasil pengujian yang telah dilakukan pada **subbab Hasil**, telah diperoleh hasil 5 rekomendasi musik atau lagu berdasarkan genre. Apabila dilakukan perhitungan untuk mengetahui bagaimana performa atau evaluasi dari model menggunakan formula pada Gambar 5. maka diperoleh nilai **Precision = 5/5 = 100%**
+- r = Total rekomendasi yang relevan
+- i = Jumlah rekomendasi yang diberikan
+  
+Berdasarkan hasil pengujian yang telah dilakukan pada **subbab Hasil**, telah diperoleh hasil 5 rekomendasi musik atau lagu berdasarkan genre. Apabila dilakukan perhitungan untuk mengetahui bagaimana performa atau evaluasi dari model menggunakan formula di atas maka diperoleh nilai **Precision = 5/5 = 100%**
 
 ## Conclusion
-Pengembangan model *machine learning* rekomendasi musik atau lagu dengan menggunakan algoritma *Content Based Filtering* membutuhkan beberapa tahapan yang bersifat iteratif, mulai dari *business understanding*, *data understanding*, dan seterusnya hingga tahapan *modelling* dan *evaluation*. Berdasarkan rangkaian tahapan tersebut diperoleh model *machine learning* rekomendasi musik atau lagu berdasarkan genre dengan hasil yang memuaskan, dengan nilai **precision 100%**. Dengan adanya model machine learning ini, diharapkan dapat membantu memberikan rekomendasi musik berdasarkan genre pada aplikasi layanan musik *online*.
+Pengembangan model *machine learning* rekomendasi musik atau lagu dengan menggunakan algoritma *Content Based Filtering* membutuhkan beberapa tahapan yang bersifat iteratif, mulai dari *business understanding*, *data understanding*, dan seterusnya hingga tahapan *modelling* dan *evaluation*. Selain itu, berdasarkan dengan konteks data, *problem statements*, dan solusi yang diimplementasikan, metrik evaluasi yang digunakan pada proyek *machine learning* ini menggunakan *precision*. *Precision* digunakan untuk mengukur berapa banyak model menghasilkan prediksi/rekomendasi yang benar. Berdasarkan tahapan evaluasi diperoleh model *machine learning* rekomendasi musik atau lagu berdasarkan genre dengan hasil yang memuaskan, dengan nilai **precision 100%**. Model machine learning dengan menggunakan algoritma *content based filtering* yang telah dikembangkan pada proyek ini dinilai mampu menjawab *problem statements* dan mencapai *goals* dari proyek yang sudah ditentukan sebelumnya. Sehingga diharapkan dengan adanya model machine learning ini dapat membantu memberikan rekomendasi musik berdasarkan genre pada aplikasi layanan musik *online*.
 
 ## References
 
