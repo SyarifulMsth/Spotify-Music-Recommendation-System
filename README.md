@@ -63,19 +63,7 @@ Tabel 1. Dataset Top Hits Spotify from 2000-2019
 **Notes:**
 * The data type "Decimal" indicates a numeric value that ranges between 0.0 and 1.0.
 * The data type "Integer" indicates a numeric value without a decimal point.
-
-### Visualization & Analysis 
-
-<p align='center'><img src ="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/artist.png?raw=true"  width="500"></p>
-<p align='center'>Gambar 1. Top 10 Artist dengan Popularity Tertinggi</p> Berdasarkan visualisasi grafik pada gambar 1 di atas menunjukkan 10 Artist dengan *popularity* tertinggi di dataset. 
- 
-<p align='center'><img src ="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/years.png?raw=true"  width="500"></p>
-<p align='center'>Gambar 2. Jumlah Lagu atau Musik Berdasarkan Tahun</p> Berdasarkan visualisasi pada gambar 2 di atas, ditunjukkan jumlah lagu untuk setiap tahunnya yang ada di dataset.
-
-<p align='center'><img src ="https://github.com/SyarifulMsth/Spotify-Music-Recommendation-System-/blob/main/images/genres.png?raw=true"  width="500"></p>
-<p align='center'>Gambar 3. Jumlah Lagu atau Musik Berdasarkan Genre</p> Berdasarkan visualisasi pada gambar 3 di atas, ditunjukkan jumlah lagu berdasarkan genre yang ada di dataset.
-
-
+  
 ## 📚 Data Preparation
 *Data preparation* adalah proses mempersiapkan data mentah menjadi format yang sesuai untuk analisis atau pemrosesan lebih lanjut. Berikut adalah beberapa teknik atau metode yang digunakan dalam persiapan data pada proyek ini:
 
